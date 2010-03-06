@@ -1,0 +1,17 @@
+/*
+
+ JetPlurk-dash
+
+ Migration from JetPlurk project http://github.com/irvin/JetPlurk
+ You have to set the plurk username and password in loginStr{}
+
+ Known error:
+ SyntaxError: Unable to parse JSON string (line: 186) when run in Dashboard
+ Unable to maintain login condition while test in Dashcode.
+ 
+ Source of the project is licensed under cc: BY-NC-SA 3.0 Taiwan
+ http://creativecommons.org/licenses/by-nc-sa/3.0/tw/
+
+ Irvin irvinfly@gmail.com
+
+*/
