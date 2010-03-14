@@ -92,6 +92,16 @@ function showBack(event)
         widget.prepareForTransition("ToBack");
     }
 
+
+	// Get username & password from preference & fill into text input
+	var strUsername = widget.preferenceForKey(widget.identifier + "-" + "strUsername");
+	var strPassword = widget.preferenceForKey(widget.identifier + "-" + "strPassword");
+	if (strUsername != null){
+		$(back).find("#txtUsername").attr('value', strUsername);
+		$(back).find("#txtPassword").attr('value', strPassword);
+	}
+
+
     front.style.display = "none";
     back.style.display = "block";
 
@@ -108,6 +118,18 @@ function showBack(event)
 //
 function showFront(event)
 {
+
+	// Get Username & Password
+	var strUsername = $("#txtUsername").val();
+	var strPassword = $("#txtPassword").val();
+	
+	if (strUsername != "") {
+		//Save it		
+		widget.setPreferenceForKey(strUsername, widget.identifier + "-" + "strUsername");
+		widget.setPreferenceForKey(strPassword, widget.identifier + "-" + "strPassword");
+	}
+
+		
     var front = document.getElementById("front");
     var back = document.getElementById("back");
 
@@ -121,6 +143,8 @@ function showFront(event)
     if (window.widget) {
         setTimeout('widget.performTransition();', 0);
     }
+	
+	initialPro();
 }
 
 if (window.widget) {
@@ -135,9 +159,12 @@ if (window.widget) {
 //-------------------------
 
 
+
+
+
 var loginStr = {
-	username: 'SET YOUR PLURK USERNAME HERE',
-	password: 'SET YOUR PLURK PASSWORD HERE',
+	username: '',
+	password: '',
 	api_key: 'LGMTGe6MKqjPnplwd4xHkUFTXjKOy6lJ'
 };
 
@@ -157,11 +184,19 @@ function initialPro()
 	console.log('JetPlurk ' + JetPlurkVer + ' Start: NewOffset ' + NewOffset + ' OldOffset ' + OldOffset + ' ReadOffset ' + ReadOffset);
 
 
-//$(document).ready(function() {
-	// When sidebar ready, preform reFreshPlurk()
-
-	//JetPlurkVer = $.cookie('plurkcookiea');
-
+	// Get username & password from preference
+	var strUsername = widget.preferenceForKey(widget.identifier + "-" + "strUsername");
+	var strPassword = widget.preferenceForKey(widget.identifier + "-" + "strPassword");
+	console.log("GetUsername "+strUsername+" GetPassword "+strPassword)
+	
+	// IF not get Username & Password, flip to back for setting
+	if (strUsername == null){
+		showBack();
+	} else{
+		loginStr.username=strUsername;
+		loginStr.password=strPassword;
+	}
+	
 	// Show version of JetPlurk
 	var content = "<div id='jetplurkmeta'>" + JetPlurkVer + "</div>";
 	$('div#jetplurkmeta').replaceWith(content);				

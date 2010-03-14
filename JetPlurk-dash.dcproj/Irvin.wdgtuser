@@ -5,7 +5,7 @@
 	<key>Breakpoints</key>
 	<dict/>
 	<key>CYLastWindowPosition</key>
-	<string>{947, 165}</string>
+	<string>{784, 126}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -16,8 +16,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1195, 233}}</string>
-			<string>{{0, 243}, {1195, 530}}</string>
+			<string>{{0, 0}, {1195, 508}}</string>
+			<string>{{0, 518}, {1195, 255}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -75,20 +75,11 @@
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>0</integer>
 				<integer>2</integer>
 			</array>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
-				<integer>1</integer>
-			</array>
-			<array>
-				<integer>0</integer>
-				<integer>0</integer>
 				<integer>0</integer>
 				<integer>0</integer>
 				<integer>0</integer>
@@ -117,12 +108,6 @@
 				<integer>0</integer>
 				<integer>0</integer>
 				<integer>0</integer>
-				<integer>0</integer>
-				<integer>0</integer>
-				<integer>1</integer>
-				<integer>0</integer>
-			</array>
-			<array>
 				<integer>0</integer>
 				<integer>0</integer>
 				<integer>1</integer>
@@ -165,6 +150,54 @@
 			</array>
 			<array>
 				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+				<integer>3</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
 				<integer>0</integer>
 				<integer>1</integer>
 				<integer>0</integer>
@@ -182,14 +215,31 @@
 				<integer>0</integer>
 				<integer>1</integer>
 				<integer>0</integer>
+				<integer>3</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
 				<integer>1</integer>
 				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
 			</array>
 		</array>
 		<key>Objects view last selections</key>
 		<array>
 			<array>
 				<integer>0</integer>
+				<integer>0</integer>
+				<integer>2</integer>
 			</array>
 		</array>
 		<key>Visible StackLayout Views</key>

@@ -29,110 +29,6 @@ body {
 /*    background-color: rgb(222, 184, 135); */
 
 /*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
 }
 
 #frontImg {
@@ -152,6 +48,7 @@ body {
     position: absolute;
     width: 13px;
     height: 13px;
+    opacity: 1;
     top: 18px;
     right: 17px;
     margin-left: auto;
@@ -166,85 +63,30 @@ body {
     position: absolute;
     display: block;
     top: 0px;
-    left: 0px;
-    bottom: 0px;
     right: 0px;
     width: auto;
+    bottom: 0px;
     height: auto;
+    left: 0px;
 }
 
 #done {
     position: absolute;
-    right: 21px;
-    bottom: 21px;
-    margin-left: auto;
-    margin-top: auto;
+    top: 288px;
+    left: 242px;
 }
 
 #backDevelopedWith {
     position: absolute;
-    top: 67px;
-    left: 65px;
     width: 150px;
     height: 49px;
-    margin-left: auto;
+    top: 470px;
+    left: 30px;
     margin-right: auto;
 }
 /*---------------------------*/
 body {
     margin: 0px;
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
 /*    background-color: rgb(222, 184, 135); */
 
 /*    background-color: rgb(222, 184, 135); */
@@ -271,58 +113,6 @@ body {
 /*    background-color: rgb(222, 184, 135); */
 
 /*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
-
-/*    background-color: rgb(222, 184, 135); */
 }
 
 #banner {
@@ -334,11 +124,11 @@ body {
     margin-left: 0px;
 }
 
-#banner img.jetplurk {
+#banner img #icon {
     border-width: 0px;
-    border-style: initial;
-    border-color: initial;
     float: left;
+    width: 50px;
+    height: 50px;
 }
 
 #banner #jetplurkmeta {
@@ -602,6 +392,7 @@ div#loadmore a {
     right: 25px;
     width: auto;
     left: 25px;
+    opacity: 1;
 }
 
 #content {
@@ -647,4 +438,145 @@ div#loadmore a {
     min-height: 45px;
     height: auto;
     margin-left: 55px !important;
+}
+
+#text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    top: 202px;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans';
+    font-size: 13px;
+    height: auto;
+    right: 215px;
+    width: auto;
+    left: 80px;
+}
+
+.selected #text {
+    color: white;
+}
+
+#text1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans';
+    font-size: 13px;
+    top: 246px;
+    height: auto;
+    right: 215px;
+    width: auto;
+    left: 80px;
+}
+
+.selected #text1 {
+    color: white;
+}
+
+#text2 {
+    font-size: 13px;
+    font-family: 'Lucida Grande', Arial, sans-serif;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    top: 160px;
+    width: auto;
+    height: auto;
+    left: 80px;
+}
+
+.selected #text2 {
+    color: white;
+}
+
+#image {
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    margin-top: 0px;
+    width: 60px;
+    height: 60px;
+    top: 77px;
+    left: 80px;
+}
+
+#inner_image {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#txtUsername {
+    position: absolute;
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 126px;
+    left: 159px;
+    top: 197px;
+    white-space: nowrap;
+}
+
+#txtPassword {
+    position: absolute;
+    color: black;
+    font-family: HelveticaNeue;
+    font-size: 10pt;
+    width: 126px;
+    left: 159px;
+    top: 241px;
+    white-space: nowrap;
+}
+
+#inner_image1 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+#icon {
+    -khtml-margin-top-collapse: separate;
+    -khtml-margin-bottom-collapse: separate;
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    position: absolute;
+    right: auto;
+    bottom: auto;
+    top: 0px;
+    left: 0px;
+}
+
+#inner_image2 {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
 }
