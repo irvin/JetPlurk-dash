@@ -171,7 +171,7 @@ var loginStr = {
 
 var sliderObj = null; // Save slide object
 var NewOffset = Date.parse(new Date()); // To remember latest refresh time
-var JetPlurkVer = '0.0xx';
+var JetPlurkVer = '0.00x';
 //	var JetPlurkVer = null;
 var ReadOffset = Date.parse("January 1, 1975 00:00:00"); // Latest read plurk post time
 var OldOffset = Date.parse(new Date()); // Oldest loaded plurk timestamp
@@ -227,13 +227,13 @@ function initialPro()
 function reFreshPlurk() {
 	// When reFreshPlurk, preform login and get newest plurk
 	
-	$.ajax({
-		url: "https://www.plurk.com/API/Users/login",
-		data: loginStr,
-		
-		// When login success, throw the newest plurk come with login
-		success: function(json) {
-			var jsObject = JSON.parse(json);
+	API.call('/Users/login', {                                            
+			username:   loginStr.username,                     
+			password:   loginStr.password,                    
+			ssl:        true,                                         
+		},                                                            
+		function(jsObject) {	
+			// Success
 
 			// Wipe out old msg
 			$('#msgs').fadeOut('medium', function() {
@@ -261,14 +261,13 @@ function reFreshPlurk() {
 			
 			var content = "<div id='usermeta'><img class='useravatar' src='" + avatarurl + "' /><span class='displayname'>" + user_displayname + "</span> <span class='karma'>Karma:" + jsObject.user_info.karma + "</span></div>";
 			$("#usermeta").replaceWith(content);
-			
-		},
-		error: function(xhr, textStatus, errorThrown) {
+
+		},                                
+		function(xhr, textStatus, errorThrown) {
 			// Login error
 			console.log('Login error: ' + xhr.status + ' ' + xhr.responseText);
-		}
-		
-	});
+		}                                    
+	);
 };
 
 

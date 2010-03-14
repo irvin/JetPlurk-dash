@@ -5,7 +5,7 @@
 	<key>Breakpoints</key>
 	<dict/>
 	<key>CYLastWindowPosition</key>
-	<string>{784, 126}</string>
+	<string>{973, 135}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -235,13 +235,7 @@
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array>
-			<array>
-				<integer>0</integer>
-				<integer>0</integer>
-				<integer>2</integer>
-			</array>
-		</array>
+		<array/>
 		<key>Visible StackLayout Views</key>
 		<array>
 			<string>front</string>
