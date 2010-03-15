@@ -9,12 +9,15 @@ var dashcodePartSpecs = {
     "icon": { "view": "DC.ImageLayout" },
     "image": { "view": "DC.ImageLayout" },
     "image1": { "view": "DC.ImageLayout" },
-    "info": { "backgroundStyle": "black", "creationFunction": "CreateInfoButton", "foregroundStyle": "white", "frontID": "front", "onclick": "showBack" },
+    "info": { "backgroundStyle": "white", "creationFunction": "CreateInfoButton", "foregroundStyle": "black", "frontID": "front", "onclick": "showBack" },
+    "jetplurkmeta": { "text": "jetplurkmeta", "view": "DC.Text" },
+    "jetplurkmeta1": { "text": "JetPlurk-dash", "view": "DC.Text" },
     "scrollArea": { "autoHideScrollbars": true, "creationFunction": "CreateScrollArea", "hasVerticalScrollbar": true, "scrollbarDivSize": 18, "scrollbarMargin": 6, "spacing": 4 },
     "text": { "text": "Username", "view": "DC.Text" },
     "text1": { "text": "Password", "view": "DC.Text" },
-    "text2": { "text": "Please setting your Plurk account", "view": "DC.Text" }
+    "text2": { "text": "pleasesetaccount", "view": "DC.Text" }
 };
+
 
 
 

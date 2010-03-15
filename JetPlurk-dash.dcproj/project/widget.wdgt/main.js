@@ -1,3 +1,4 @@
+
 /*
 
  JetPlurk-dash
@@ -29,7 +30,6 @@
 function load()
 {
     //dashcode.setupParts();
-	initialPro();
 }
 
 //
@@ -58,9 +58,8 @@ function hide()
 //
 function show()
 {
-	initialPro();
-
     // Restart any timers that were stopped on hide
+	initialPro();
 }
 
 //
@@ -92,7 +91,6 @@ function showBack(event)
         widget.prepareForTransition("ToBack");
     }
 
-
 	// Get username & password from preference & fill into text input
 	var strUsername = widget.preferenceForKey(widget.identifier + "-" + "strUsername");
 	var strPassword = widget.preferenceForKey(widget.identifier + "-" + "strPassword");
@@ -100,7 +98,6 @@ function showBack(event)
 		$(back).find("#txtUsername").attr('value', strUsername);
 		$(back).find("#txtPassword").attr('value', strPassword);
 	}
-
 
     front.style.display = "none";
     back.style.display = "block";
@@ -122,13 +119,10 @@ function showFront(event)
 	// Get Username & Password
 	var strUsername = $("#txtUsername").val();
 	var strPassword = $("#txtPassword").val();
-	
-	if (strUsername != "") {
-		//Save it		
+	if (strUsername != "") {	//Save it		
 		widget.setPreferenceForKey(strUsername, widget.identifier + "-" + "strUsername");
 		widget.setPreferenceForKey(strPassword, widget.identifier + "-" + "strPassword");
 	}
-
 		
     var front = document.getElementById("front");
     var back = document.getElementById("back");
@@ -160,8 +154,6 @@ if (window.widget) {
 
 
 
-
-
 var loginStr = {
 	username: '',
 	password: '',
@@ -170,7 +162,6 @@ var loginStr = {
 var sliderObj = null; // Save slide object
 var NewOffset = Date.parse(new Date()); // To remember latest refresh time
 var JetPlurkVer = '0.00x';
-//	var JetPlurkVer = null;
 var ReadOffset = Date.parse("January 1, 1975 00:00:00"); // Latest read plurk post time
 var OldOffset = Date.parse(new Date()); // Oldest loaded plurk timestamp
 var user_displayname = null;
@@ -181,12 +172,9 @@ function initialPro()
 {
 	console.log('JetPlurk ' + JetPlurkVer + ' Start: NewOffset ' + NewOffset + ' OldOffset ' + OldOffset + ' ReadOffset ' + ReadOffset);
 
-
 	// Get username & password from preference
 	var strUsername = widget.preferenceForKey(widget.identifier + "-" + "strUsername");
-	var strPassword = widget.preferenceForKey(widget.identifier + "-" + "strPassword");
-	console.log("GetUsername "+strUsername+" GetPassword "+strPassword)
-	
+	var strPassword = widget.preferenceForKey(widget.identifier + "-" + "strPassword");	
 	// IF not get Username & Password, flip to back for setting
 	if (strUsername == null){
 		showBack();
@@ -194,6 +182,7 @@ function initialPro()
 		loginStr.username=strUsername;
 		loginStr.password=strPassword;
 	}
+	// console.log("GetUsername "+strUsername+" GetPassword "+strPassword)
 	
 	// Show version of JetPlurk
 	var content = "<div id='jetplurkmeta'>" + JetPlurkVer + "</div>";
@@ -432,7 +421,6 @@ function ShowNewPlurk(jsObject) {
 					$(hoverMsg).removeClass("unread").removeClass("unreadresponse");
 					if (Date.parse(selectPlurkTimestamp) > ReadOffset) {
 						ReadOffset = Date.parse(selectPlurkTimestamp);
-						myStorage.ReadOffset = ReadOffset;
 						// console.log('myStorage.ReadOffset update: ' + myStorage.ReadOffset);
 					}			
 				},                                
@@ -466,20 +454,18 @@ function ShowNewPlurk(jsObject) {
 				event.preventDefault();
 				event.stopPropagation(); // Stop event bubble
 			});
+			
 			$(clickMsg).find(":submit").click(function(event) {
 				// when click response form submit button, check textarea, and submit response
 				var response_txt = $(clickMsg).find("textarea").val();
 				if (response_txt != "") {
-				
-				
-				
 					API.call('/Responses/responseAdd', {
 							plurk_id: selectPlurkID,
 							content: response_txt,
 							qualifier: ':'
 						},
-						function(jsObject) {	// Success
-							// console.log('Responsed: ' + json);
+						function(reObject) {	// Success
+							console.log('Responsed: ' + reObject);
 							// Display new response
 							
 							var responser_id = reObject.user_id;
@@ -499,7 +485,7 @@ function ShowNewPlurk(jsObject) {
 								content += "[" + qualifier + "] ";
 							}
 							content += reObject.content + " <span class='meta'><timestr>" + timestr + "</timestr></span></response>";
-							// console.log(content);
+							console.log(content);
 							$(clickMsg).find("form#responseform").before(content);
 							$(clickMsg).find("form#responseform").get(0).reset();
 		
@@ -517,16 +503,12 @@ function ShowNewPlurk(jsObject) {
 			
 			if (selectPlurkResponseNum != "") {
 				// If click msg has response & not showing now, get response
-				$.ajax({
-					url: "https://www.plurk.com/API/Responses/get",
-					data: ({
-						'api_key': loginStr.api_key,
-						'plurk_id': selectPlurkID,
-						'from_response': 0
-					}),
-					success: function(json) {
+				API.call('/Responses/get', {
+						plurk_id: selectPlurkID,
+						from_response: 0
+					},
+					function(jsObject) {	// Success
 						// console.log('Get response: ' + json);
-						var jsObject = JSON.parse(json);
 						
 						// Display each response
 						$(jsObject.responses).each(function(i) {
@@ -555,12 +537,14 @@ function ShowNewPlurk(jsObject) {
 							$(clickMsg).find("form#responseform").before(content);
 						});
 						// console.log($(clickMsg).html());
-					
-					},
-					error: function(xhr, textStatus, errorThrown) {
-						console.log('Get response error: ' + xhr.status + ' ' + xhr.responseText);
+		
+					},                                
+					function(xhr, textStatus, errorThrown) {
+						// Login error
+						console.log('Login error: ' + xhr.status + ' ' + xhr.responseText);
 					}
-				});
+				);
+
 			}
 			
 		}
@@ -574,6 +558,7 @@ function ShowNewPlurk(jsObject) {
 	});
 	
 	// Force all link open in new tabs, From littlebtc.
+	/*
 	$('#msgs').find('a').click(function(e) {
 		// console.log(this.href);
 		if (this.href) {
@@ -583,13 +568,13 @@ function ShowNewPlurk(jsObject) {
 		e.preventDefault();
 		e.stopPropagation();
 	});
-	
+	*/
 
 }
 
 
-function refreshScrollArea()
-{
+function refreshScrollArea() {
+	// Refresh ScrollArea when content change to adjust scrollbar 
     var contentarea = document.getElementById("scrollArea");
     if (contentarea) {
 		console.log("");

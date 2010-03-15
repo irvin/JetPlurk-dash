@@ -19,7 +19,6 @@
         <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="false" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.75,0.75,0.75,1; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-on: 0; shine-strength: 1.00; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.10; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 1; shadow-offset: -1.00,-6.00; shadow-color: 0,0,0,0.3333;">
         <div id="scrollArea" apple-part="com.apple.Dashcode.part.scrollarea" apple-group="scrollArea">
             <div id="content" class="content" apple-group="scrollArea" style="position: absolute; left: 0px; top: 0px; right: 22px; bottom: 0px; overflow-x: hidden; overflow-y: hidden; "><div id="banner">
-                    <div id="jetplurkmeta">JetPlurkVer</div>
                     <div id="usermeta"></div>
                     <div apple-part="com.apple.Dashcode.part.imageLayout" id="icon" apple-group="image1"><a href="http://www.plurk.com" target="_blank"><img class="apple-hidden" src="Images/jetplurk.png" id="inner_image2" apple-group="image1"></a></div>
                 </div><div id="sendPlurk">
@@ -27,11 +26,11 @@
                         <input id="text_area" type="text" name="content">
                         <input id="send_button" type="button" value="Plurk">
                     </form>
-                </div><div id="msgs">
+                </div><div id="msgs" apple-default-image-visibility="hidden">
                     <msg>
                     </msg>
-                </div><div id="loadmore">
-                    <a href="#">Load more</a>
+                </div><div id="loadmore" apple-default-image-visibility="hidden">
+                    <a href="#" apple-default-image-visibility="hidden">Load more</a>
                 </div></div></div>
         <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
     </div>
@@ -39,12 +38,14 @@
         <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
         <img src="Images/DevelopedWith.png" alt="Created with Dashcode" id="backDevelopedWith">
         <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+        <div id="jetplurkmeta" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis"></div>
         <div id="text" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" apple-style="part-height-dependent: true;"></div>
         <div id="text1" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" apple-style="part-height-dependent: true;"></div>
         <div id="text2" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" apple-style="part-height-dependent: true;part-width-dependent: true;"></div>
         <div apple-part="com.apple.Dashcode.part.imageLayout" id="image" apple-group="image"><img class="apple-hidden" src="Images/jetplurk.png" id="inner_image" apple-group="image"></div>
         <input id="txtUsername" type="text" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield">
         <input id="txtPassword" type="password" class="apple-textfield apple-no-children" apple-part="com.apple.Dashcode.part.textfield">
+        <div id="jetplurkmeta1" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis"></div>
     </div>
 </body>
 </html>

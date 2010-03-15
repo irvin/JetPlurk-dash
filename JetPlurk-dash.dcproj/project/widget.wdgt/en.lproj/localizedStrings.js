@@ -5,6 +5,10 @@
  code generator otherwise the changes will be lost.
  */
 var localizedStrings = {
-    "Hello, World!": "Hello, World!",
-    "Done": "Done"
+    "Done": "Done",
+    "JetPlurk-dash": "JetPlurk-dash",
+    "Password": "Password",
+    "pleasesetaccount": "Please set your Plurk account",
+    "Username": "Username"
 };
+
