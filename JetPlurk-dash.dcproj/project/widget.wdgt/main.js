@@ -165,9 +165,7 @@ if (window.widget) {
 var loginStr = {
 	username: '',
 	password: '',
-	api_key: 'LGMTGe6MKqjPnplwd4xHkUFTXjKOy6lJ'
 };
-
 
 var sliderObj = null; // Save slide object
 var NewOffset = Date.parse(new Date()); // To remember latest refresh time
@@ -273,28 +271,25 @@ function reFreshPlurk() {
 
 
 function sendPlurk() {
-	var sendFormObj = $('form#sendform');
-
 	// when click sendplurk form submit button, check textarea, and submit plurk	
+	var sendFormObj = $('form#sendform');
 	var response_txt = $(sendFormObj).find("#text_area").val();
 	if (response_txt != "") {
-		
-		$.ajax({
-			url: "https://www.plurk.com/API/Timeline/plurkAdd",
-			data: ({
-				'api_key': loginStr.api_key,
-				'content': response_txt,
-				'qualifier': ':'
-			}),
-			success: function(json) {
+		API.call('/Timeline/plurkAdd', {                                            
+				content:	response_txt,
+				qualifier:	':',
+			},                                                            
+			function() {	
+				// Success
 				// Display new response
 				reFreshPlurk();					
 				$(sendFormObj).find("#text_area").attr('value', null);
-			},
-			error: function(xhr) {
-				console.log('Plurk error: ' + xhr.status + ' ' + xhr.responseText);
-			}
-		});
+			},                                
+			function(xhr, textStatus, errorThrown) {
+				// Login error
+				console.log('Login error: ' + xhr.status + ' ' + xhr.responseText);
+			}                                    
+		);		
 	}
 }
 
@@ -339,28 +334,24 @@ function postTime(d) {
 }
 
 function loadMorePlurk() {
-	// When loadMorePlurk, get old plurks from OldOffset
-	$.ajax({
-		url: "https://www.plurk.com/API/Timeline/getPlurks",
-		data: ({
-			'api_key': loginStr.api_key,
-			// offset in ISO 8601 format	
-			'offset': ISODateString(new Date(OldOffset))
-		}),
-		success: function(json) {
+	// When loadMorePlurk, get old plurks from OldOffset	
+	API.call('/Timeline/getPlurks', {
+			offset: ISODateString(new Date(OldOffset)),
+		},
+		function(jsObject) {	// Success
 			// Throw the loaded plurk to show plurk function
-			var jsObject = JSON.parse(json);
+			// var jsObject = JSON.parse(json);
 			// correct plurk api bugs
 			jsObject.plurks_users = jsObject.plurk_users;
 			// console.log(json)
 			ShowNewPlurk(jsObject);
 			console.log('JetPlurk Load More: NewOffset ' + NewOffset + ' OldOffset ' + OldOffset + ' ReadOffset ' + ReadOffset);
-		},
-		error: function(xhr, textStatus, errorThrown) {
+		},                                
+		function(xhr, textStatus, errorThrown) {
 			// Login error
-			console.log('Load More error: ' + xhr.status + ' ' + xhr.responseText);
+			console.log('Login error: ' + xhr.status + ' ' + xhr.responseText);
 		}
-	});
+	);
 };
 
 function ShowNewPlurk(jsObject) {
@@ -431,26 +422,25 @@ function ShowNewPlurk(jsObject) {
 		if ((selectPlurkRead == 'unread') || (selectPlurkRead == 'unreadresponse')) {
 			// if unread or unreadresponse, set to read when hover
 			var boTrue = new Boolean(true);
-			$.ajax({
-				url: "https://www.plurk.com/API/Timeline/markAsRead",
-				data: ({
-					'api_key': loginStr.api_key,
-					'ids': JSON.stringify([selectPlurkID]),
-					'note_position': true
-				}),
-				success: function(json) {
-					// console.log('Set read: ' + json);
+						
+			API.call('/Timeline/markAsRead', {
+					ids: JSON.stringify([selectPlurkID]),
+					note_position: true
+				},
+				function(jsObject) {	// Success
+				// console.log('Set read: ' + json);
 					$(hoverMsg).removeClass("unread").removeClass("unreadresponse");
 					if (Date.parse(selectPlurkTimestamp) > ReadOffset) {
 						ReadOffset = Date.parse(selectPlurkTimestamp);
 						myStorage.ReadOffset = ReadOffset;
 						// console.log('myStorage.ReadOffset update: ' + myStorage.ReadOffset);
-					}
-				},
-				error: function(xhr, textStatus, errorThrown) {
-					console.log('Set read error: ' + xhr.status + ' ' + xhr.responseText);
+					}			
+				},                                
+				function(xhr, textStatus, errorThrown) {
+					// Login error
+					console.log('Login error: ' + xhr.status + ' ' + xhr.responseText);
 				}
-			});
+			);
 		}
 	}, function() {
 		// console.log("unHOVER!");
@@ -481,19 +471,17 @@ function ShowNewPlurk(jsObject) {
 				var response_txt = $(clickMsg).find("textarea").val();
 				if (response_txt != "") {
 				
-					$.ajax({
-						url: "https://www.plurk.com/API/Responses/responseAdd",
-						data: ({
-							'api_key': loginStr.api_key,
-							'plurk_id': selectPlurkID,
-							'content': response_txt,
-							'qualifier': ':'
-						}),
-						success: function(json) {
+				
+				
+					API.call('/Responses/responseAdd', {
+							plurk_id: selectPlurkID,
+							content: response_txt,
+							qualifier: ':'
+						},
+						function(jsObject) {	// Success
 							// console.log('Responsed: ' + json);
 							// Display new response
 							
-							var reObject = JSON.parse(json);
 							var responser_id = reObject.user_id;
 							responser_display_name = user_displayname;
 							
@@ -514,9 +502,13 @@ function ShowNewPlurk(jsObject) {
 							// console.log(content);
 							$(clickMsg).find("form#responseform").before(content);
 							$(clickMsg).find("form#responseform").get(0).reset();
-							
+		
+						},                                
+						function(xhr, textStatus, errorThrown) {
+							// Login error
+							console.log('Login error: ' + xhr.status + ' ' + xhr.responseText);
 						}
-					})
+					);
 					
 				}
 				event.preventDefault();

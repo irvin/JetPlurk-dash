@@ -7,11 +7,11 @@
 		<key>Widget</key>
 		<dict>
 			<key>AppIconFGImagePoint</key>
-			<string>{-1, -1}</string>
+			<string>{7, 7}</string>
 			<key>AppIconFGImageSize</key>
-			<string>{77, 77}</string>
+			<string>{61, 61}</string>
 			<key>AppIconImageSettings</key>
-			<string>image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.75,0.75,0.75,1; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-on: 0; shine-strength: 1.00; shine-alpha-level: 0.00; shine-height: 0.50; glass-arc-height: 0.10; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 1; shadow-offset: 0.00,-3.00; shadow-color: 0,0,0,0.3333;</string>
+			<string>image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 0.998328984,0.847976327,0.655689478,1; image-bottom-color: 0.990381002,0.731492519,0.444589198,1; image-radius: 10,10,10,10; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-on: 1; shine-strength: 0.75; shine-alpha-level: 0.00; shine-height: 0.45; glass-arc-height: -0.15; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 1; shadow-offset: 0.00,-3.00; shadow-color: 0,0,0,0.3333;</string>
 			<key>AppIconIncludeFGImage</key>
 			<true/>
 			<key>CYBackwardCompatibleExport</key>
