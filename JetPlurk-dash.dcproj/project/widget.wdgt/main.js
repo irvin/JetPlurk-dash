@@ -204,7 +204,15 @@ function initialPro()
 		event.stopPropagation(); // Stop event bubble
 	})
 
-//});
+	// Force JetPlurk icon link open in browser
+	$("#banner").find('a').click(function(e) {	
+		if (this.href) {
+			console.log(this.href);
+			widget.openURL(this.href);
+		}
+		e.stopPropagation();
+		e.preventDefault();
+	});
 
 
 }
@@ -388,7 +396,7 @@ function ShowNewPlurk(jsObject) {
 			content += "[" + qualifier + "] ";
 		}
 		
-		content += jsObject.plurks[i].content + "</content><span class='meta'><timestr>" + timestr + "</timestr> <a class='permalink' href='http://www.plurk.com/m/p/" + premalink + "' target='_blank'>link</a>";
+		content += jsObject.plurks[i].content + "</content><span class='meta'><timestr>" + timestr + "</timestr> <a class='permalink' href='http://www.plurk.com/p/" + premalink + "' target='_blank'>link</a>";
 		if (response_count > 0) { // If has response
 			content += "<responseNum>" + response_count + "</responseNum>";
 		}
@@ -433,6 +441,23 @@ function ShowNewPlurk(jsObject) {
 	}, function() {
 		// console.log("unHOVER!");
 	});
+	
+	
+	// Force all link open in browser
+	$("msg").find('a').click(function(e) {
+		// Function: clickOnLink() from Dashcode template "RSS" 
+		// Called from onClick to open a link in the browser instead of in the widget.
+		if (window.widget) {
+			widget.openURL(this.href);
+			//console.log(e);
+			//if (e) {
+				e.stopPropagation();
+				e.preventDefault();
+			//}
+			//return false;
+		}
+	});
+	
 	
 	// Add click event listener on each msg
 	$("msg").click(function() {
@@ -557,20 +582,11 @@ function ShowNewPlurk(jsObject) {
 		
 	});
 	
-	// Force all link open in new tabs, From littlebtc.
-	/*
-	$('#msgs').find('a').click(function(e) {
-		// console.log(this.href);
-		if (this.href) {
-			jetpack.tabs.open(this.href);
-			// jetpack.tabs.focus();  
-		}
-		e.preventDefault();
-		e.stopPropagation();
-	});
-	*/
 
 }
+
+
+
 
 
 function refreshScrollArea() {
