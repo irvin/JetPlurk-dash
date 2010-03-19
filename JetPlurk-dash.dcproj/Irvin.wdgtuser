@@ -5,7 +5,7 @@
 	<key>Breakpoints</key>
 	<dict/>
 	<key>CYLastWindowPosition</key>
-	<string>{662, 62}</string>
+	<string>{637, 97}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -16,8 +16,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1195, 242}}</string>
-			<string>{{0, 252}, {1195, 521}}</string>
+			<string>{{0, 0}, {1195, 391}}</string>
+			<string>{{0, 401}, {1195, 372}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
@@ -61,8 +61,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 508}}</string>
-			<string>{{0, 518}, {246, 255}}</string>
+			<string>{{0, 0}, {246, 247}}</string>
+			<string>{{0, 257}, {246, 516}}</string>
 		</array>
 	</dict>
 	<key>Widget</key>
@@ -248,17 +248,41 @@
 				<integer>1</integer>
 				<integer>0</integer>
 			</array>
-		</array>
-		<key>Objects view last selections</key>
-		<array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+			</array>
+			<array>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
+				<integer>0</integer>
+				<integer>2</integer>
+				<integer>0</integer>
+			</array>
 			<array>
 				<integer>0</integer>
 				<integer>0</integer>
 				<integer>1</integer>
 				<integer>0</integer>
 				<integer>0</integer>
+				<integer>0</integer>
 			</array>
 		</array>
+		<key>Objects view last selections</key>
+		<array/>
 		<key>Visible StackLayout Views</key>
 		<array>
 			<string>view1</string>

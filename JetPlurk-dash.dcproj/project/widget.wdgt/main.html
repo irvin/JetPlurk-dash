@@ -18,10 +18,12 @@
     <div id="front">
         <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="false" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 1,1,1,1; image-bottom-color: 0.75,0.75,0.75,1; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.5294,0.5294,0.5294,1; image-border-width: 1; shine-on: 0; shine-strength: 1.00; shine-alpha-level: 0.04; shine-height: 0.50; glass-arc-height: 0.10; embossed-on: 0; embossed-depth: 1; embossed-shadow: 0.68; embossed-highlight: 0.3; shadow-include-shadow: 1; shadow-offset: -1.00,-6.00; shadow-color: 0,0,0,0.3333;">
         <div id="scrollArea" apple-part="com.apple.Dashcode.part.scrollarea" apple-group="scrollArea">
-            <div id="content" class="content" apple-group="scrollArea" style="position: absolute; left: 0px; top: 0px; right: 22px; bottom: 0px; overflow-x: hidden; overflow-y: hidden; "><div id="banner">
+            <div id="content" class="content" apple-group="scrollArea" style="position: absolute; left: 0px; top: 0px; right: 22px; bottom: 0px; overflow-x: hidden; overflow-y: hidden; ">
+                <div id="banner" onclick="openPersonalPlurk(event)">
                     <div id="usermeta"></div>
-                    <div apple-part="com.apple.Dashcode.part.imageLayout" id="icon" apple-group="image1"><a href="http://www.plurk.com"><img class="apple-hidden" src="Images/jetplurk.png" id="inner_image2" apple-group="image1"></a></div>
-                </div><div id="sendPlurk">
+                    <div apple-part="com.apple.Dashcode.part.imageLayout" id="icon" apple-group="image1" class="cursor_pointer"><img class="apple-hidden" src="Images/jetplurk.png" id="inner_image1" apple-group="image1"></div>
+                </div>
+                <div id="sendPlurk">
                     <form id="sendform">
                         <input id="text_area" type="text" name="content">
                         <input id="send_button" type="button" value="Plurk">
