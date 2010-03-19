@@ -21,7 +21,7 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>DeploymentOptions</key>
 	<dict>
 		<key>Destination</key>
@@ -61,8 +61,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 247}}</string>
-			<string>{{0, 257}, {246, 516}}</string>
+			<string>{{0, 0}, {246, 476}}</string>
+			<string>{{0, 486}, {246, 287}}</string>
 		</array>
 	</dict>
 	<key>Widget</key>
@@ -282,7 +282,11 @@
 			</array>
 		</array>
 		<key>Objects view last selections</key>
-		<array/>
+		<array>
+			<array>
+				<integer>5</integer>
+			</array>
+		</array>
 		<key>Visible StackLayout Views</key>
 		<array>
 			<string>view1</string>
