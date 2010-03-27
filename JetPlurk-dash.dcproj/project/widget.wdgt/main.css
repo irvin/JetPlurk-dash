@@ -290,6 +290,7 @@ div#loadmore a {
     width: auto;
     height: 30px;
     margin-left: 0px;
+	display: none;
 }
 
 

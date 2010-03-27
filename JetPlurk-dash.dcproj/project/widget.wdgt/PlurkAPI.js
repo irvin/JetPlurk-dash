@@ -1,5 +1,5 @@
 var API = {
-    key:    'mD4mSYJcsJo6YQGSBFcVQbtUOgr9XZ5H',
+    key:    'LGMTGe6MKqjPnplwd4xHkUFTXjKOy6lJ',
     timeout: 10000,
     __cookie: null,
     __ajaxParams: null,

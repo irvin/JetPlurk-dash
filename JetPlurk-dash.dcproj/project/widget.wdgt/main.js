@@ -1,15 +1,13 @@
 /*
 
  JetPlurk-dash
-
- Migration from JetPlurk project http://github.com/irvin/JetPlurk
-
- Known error:
+ http://sites.google.com/site/jetplurk/dash
  
- Source of the project is licensed under cc: BY-NC-SA 3.0 Taiwan
+ This project is licensed under cc: BY-NC-SA 3.0 Taiwan 
  http://creativecommons.org/licenses/by-nc-sa/3.0/tw/
+ Source: http://github.com/irvin/JetPlurk-dash 
 
- Irvin irvinfly@gmail.com
+ Irvin (irvinfly@gmail.com)
 
 */
 
@@ -154,7 +152,7 @@ var userData = {
 };
 
 var NewOffset = Date.parse(new Date()); // To remember latest refresh time
-var JetPlurkVer = '0.1';
+var JetPlurkVer = '0.11';
 var ReadOffset = Date.parse("January 1, 1975 00:00:00"); // Latest read plurk post time
 var OldOffset = Date.parse(new Date()); // Oldest loaded plurk timestamp
 var user_displayname = null;

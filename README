@@ -1,17 +1,22 @@
-/*
 
- JetPlurk-dash
+JetPlurk-dash
+http://sites.google.com/site/jetplurk/dash
 
- Migration from JetPlurk project http://github.com/irvin/JetPlurk
- You have to set the plurk username and password in loginStr{}
+This project is licensed under cc: BY-NC-SA 3.0 Taiwan 
+http://creativecommons.org/licenses/by-nc-sa/3.0/tw/
+Source: http://github.com/irvin/JetPlurk-dash 
 
- Known error:
- SyntaxError: Unable to parse JSON string (line: 186) when run in Dashboard
- Unable to maintain login condition while test in Dashcode.
- 
- Source of the project is licensed under cc: BY-NC-SA 3.0 Taiwan
- http://creativecommons.org/licenses/by-nc-sa/3.0/tw/
+Irvin (irvinfly@gmail.com)
 
- Irvin irvinfly@gmail.com
 
-*/
+-Change notes-
+
+ 011: Temporary disable buggy load more function, change plurk API key. (20100328)
+
+
+-Known issue-
+
+ * Sometimes open response will failed occasionally.
+ * Continuous multiple plurks from the same person will show only one, due to bug of plurk API.
+ * Set read status to plurk with response malfunction due to bug of plurk API.
+ * Some links will open inside widget.
